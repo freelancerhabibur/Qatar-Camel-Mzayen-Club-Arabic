@@ -1,0 +1,154 @@
+.footer {
+    .footer-top {
+        // padding: 100px 0 40px;
+        padding: 40px 0 40px;
+        @include lg-devices {
+            padding: 60px 0 40px;
+        }
+        @include xl-devices {
+            padding: 80px 0 50px;
+        }
+        @include xxl-devices {
+            padding: 100px 0 40px;
+        }
+        .widget-title {
+            margin-bottom: 20px;
+            font-size: 18px;
+            @include xl-devices {
+                font-size: 22px;
+                margin-bottom: 30px;
+            }
+            @include xxl-devices {
+                font-size: 24px;
+                margin-bottom: 40px;
+            }
+        }
+        .newsletter {
+            padding-left: 30px;
+            @include xxl-devices {
+                padding-left: 50px;
+            }
+            form {
+                margin-bottom: 20px;
+                max-width: 360px;
+                input {
+                    height: 45px;
+                    border: 1px solid $color__brown;
+                    border-radius: 0;
+                    box-shadow: none;
+                }
+                button {
+                    background-color: $color__brown;
+                    color: $color__white;
+                    border: 0;
+                    padding: 0 20px;
+                }
+            }
+            p {
+                line-height: 1.875;
+            }
+        }
+        .footer-menu{
+            li {
+                width: 48%;
+                float: right;
+                line-height: 2;
+                font-family: $font-janna-bold;
+                position: relative;
+                padding-right: 20px;
+                @include xl-devices {
+                    width: 100%;
+                }
+                
+                &::before {
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    top: 13px;
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 50%;
+                    background-color: $color__Black;
+                }
+                a {
+                    color: $color__brown;
+                    &:hover {
+                        color: #cf303f;
+                        text-decoration: underline;
+                        text-underline-offset: 5px;
+                    }
+                }
+            
+            }
+        }
+        .follow-us {
+            ul {
+                li {
+                    display: inline-block;
+                    margin-left: 5px;
+                    i {
+                        color: $color__green;
+                        border: 1px solid $color__green;
+                        width: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                        text-align: center;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+        .logos {
+            text-align: center;
+            @include xl-devices {
+                text-align: left;
+            }
+            li {
+                display: inline-block;
+
+                & + li {
+                    margin-right: 20px;
+                }
+            }
+            img {
+                height: 60px;
+                @include xl-devices {
+                    height: inherit;
+                }
+            }
+        }
+        [class*=col] + [class*=col] {
+            .footer-widget {
+                margin-top: 25px;
+                @include md-devices {
+                    margin-top: 0;
+                }
+            }
+        }
+        [class*=col]:nth-child(3), [class*=col]:nth-child(4) {
+            .footer-widget {
+                margin-top: 25px;
+                @include md-devices {
+                    margin-top: 35px;
+                }
+                @include xl-devices {
+                    margin-top: 0;
+                }
+            }
+        }
+        [class*=col]:nth-child(4) {
+            .footer-widget {
+                @include xl-devices {
+                    margin-top: 70px;
+                }
+            }
+        }
+    }
+    .footer-bottom {
+        padding: 5px 0;
+        text-align: center;
+        p {
+            color: $color__white;
+        }
+    }
+}

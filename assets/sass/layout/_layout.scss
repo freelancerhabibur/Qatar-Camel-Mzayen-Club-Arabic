@@ -1,0 +1,16 @@
+.container {
+    @include xl-devices {
+        max-width: 1260px;
+    }
+    @include xxl-devices {
+        max-width: 1560px;
+    }
+}
+
+@import 'hero';
+@import 'cta';
+@import 'events-fastivals';
+@import 'news';
+@import 'gallery';
+@import 'sponsors';
+@import 'contact';

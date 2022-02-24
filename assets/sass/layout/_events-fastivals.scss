@@ -1,0 +1,182 @@
+.events-fastivals {
+    background-color: $color__green;
+    padding: 10px 0;
+    @include sm-devices {
+        padding: 40px 0;
+    }
+    @include xxl-devices {
+        padding: 60px 0;
+    }
+    .container {
+        background-color: $color__white;
+        border-radius: 10px;
+        padding: 50px 15px 50px;
+        position: relative;
+        z-index: 1;
+        @include xsm-devices {
+            padding: 70px 15px 70px;
+        }
+        @include md-devices {
+            padding: 80px 60px;
+        }
+        @include xxl-devices {
+            max-width: 1340px;
+        }
+        @include xxxl-devices {
+            max-width: 1560px;
+        }
+    }
+    .top-logo {
+        text-align: center;
+        margin-bottom: 15px;
+        @include sm-devices {
+            margin-bottom: 20px;
+        }
+        @include md-devices {
+            margin-bottom: 30px;
+        }
+        @include xxl-devices {
+            margin-bottom: 50px;
+        }
+        img {
+            width: 150px;
+            @include lg-devices {
+                width: 180px;
+            }
+            @include xl-devices {
+                width: 250px;
+            }
+        }
+    }
+    .item {
+        background-color: $color__white;
+        box-shadow: 0 0 10px 2px rgba(0,0,0,0.15);
+        padding: 20px 20px;
+        border-radius: 5px;
+        transition: all 0.3s;
+        @include md-devices {
+            padding: 25px 20px;
+        }
+        @include xl-devices {
+            padding: 30px 16px;
+            border-radius: 10px;
+        }
+        @include xxxl-devices {
+            padding: 30px 20px;
+        }
+        img {
+            transition: all 0.1s;
+            height: 50px;
+            @include lg-devices {
+                transform: scale(0.9);
+                height: 75px;
+            }
+            @include xxl-devices {
+                height: 85px;
+            }
+        }
+
+        p {
+            font-family: $font-janna-bold;
+            font-size: 14px;
+            margin-top: 15px;
+            @include sm-devices {
+                font-size: 15px;
+            }
+            @include md-devices {
+                font-size: 16px;
+            }
+            @include lg-devices {
+                font-size: 17px;
+            }
+            @include xl-devices {
+                font-size: 18px;
+            }
+            @include xxxl-devices {
+                font-size: 20px;
+            }
+        }
+
+        &:hover {
+            background-color: #cf303f;
+
+            p {
+                color: $color__white;
+                transition: all 0.23s;
+            }
+            img {
+                filter: grayscale(100%) brightness(100);
+            }
+        }
+    }
+
+    .button {
+        text-align: center;
+        margin-top: 25px;
+        @include sm-devices {
+            margin-top: 30px;
+        }
+        @include md-devices {
+            margin-top: 40px;
+        }
+        @include xl-devices {
+            margin-top: 60px;
+        }
+        a {
+            display: inline-block;
+            padding: 14px 40px;
+            background-color: $color__brown;
+            color: $color__white;
+            font-family: $font-janna-bold;
+            font-size: 14px;
+            transition: all 0.3s;
+            @include sm-devices {
+                font-size: 15px;
+            }
+            @include md-devices {
+                font-size: 16px;
+                padding: 16px 40px;
+            }
+            @include lg-devices {
+                font-size: 18px;
+                padding: 20px 40px;
+            }
+            &:hover {
+                background-color: #cf303f;
+            }
+        }
+    }
+
+    .background-shape {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        overflow: hidden;
+
+        img {
+            position: absolute;
+
+            &.shape-top {
+                left: 0;
+                top: 0;
+                transform: rotate(340deg) translateX(-60px);
+                @include md-devices {
+                    transform: rotate(340deg) translateX(-85px) scale(0.9);
+
+                }
+            }
+            &.shape-bottom {
+                right: 0;
+                bottom: 0;
+                transform: rotate(340deg) translateX(60px) scaleX(-1);
+                @include md-devices {
+                    transform: rotate(340deg) translateX(85px) scaleX(-1) scale(0.9);
+
+                }
+            }
+        }
+    }
+}

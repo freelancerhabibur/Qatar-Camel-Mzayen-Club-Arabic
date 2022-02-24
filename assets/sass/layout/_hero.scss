@@ -1,0 +1,71 @@
+.hero {
+    margin-top: 130px;
+    background-image: url(../images/bg-shape.webp);
+
+    .item {
+        position: relative;
+
+        .text-content {
+            padding: 70px 0 20px;
+            font-size: 16px;
+            line-height: 1.875;
+            @include sm-devices {
+                font-size: 18px;
+            }
+            @include md-devices {
+                padding: 100px 0 50px;
+                font-size: 20px;
+            }
+            @include xl-devices {
+                padding: 150px 0 100px;
+            }
+            @include xxl-devices {
+                padding: 200px 0 130px;
+                font-size: 22px;
+            }
+            @include xxxl-devices {
+                padding: 300px 0 150px;
+                font-size: 26px;
+            }
+        }
+        .image {
+            @media (max-width: 991px) {
+                display: none;
+            }
+            @include lg-devices {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 425px;
+            }
+            @media (min-width: 1170px) {
+                width: 460px;
+            }
+            @include xxl-devices {
+                width: 550px;
+            }
+            @include xxxl-devices {
+                width: 700px;
+            }
+        }
+    }
+    .owl-carousel {
+        .owl-dots {
+            text-align: center;
+            margin-bottom: 70px;
+            @include xxxl-devices {
+                margin-bottom: 100px;
+            }
+            .owl-dot {
+                width: 10px;
+                height: 10px;
+                background-color: $color__brown;
+                margin: 5px;
+                border-radius: 50%;
+                &.active {
+                    background-color: #cf303f;
+                }
+            }
+        }
+    }
+}

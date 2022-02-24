@@ -1,0 +1,55 @@
+.contact-us {
+    padding: 50px 0;
+    .title {
+        margin-bottom: 20px;
+    }
+    .contact-item {
+        background-color: $color__white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        transition: all 0.3s;
+        margin-bottom: 15px;
+        @include md-devices {
+            padding: 15px 20px;            
+        }
+        @include lg-devices {
+            padding: 15px 15px;            
+        }
+        @include xl-devices {
+            padding: 20px;            
+        }
+
+        img {
+            height: 30px;
+            margin-left: 15px;
+            @include lg-devices {
+                margin-left: 10px;
+            }
+            @include xl-devices {
+                margin-left: 20px;
+                height: 40px;
+            }
+            @include xxl-devices {
+                height: 50px;
+            }
+        }
+        a {
+            font-family: $font-janna-bold;
+            font-size: 15px;
+            @include xl-devices {
+                font-size: 18px;
+            }
+        }
+
+        &:hover {
+            background-color: #cf303f;
+            
+            a {
+                color: $color__white;
+            }
+            img {
+                filter: grayscale(100%) brightness(100);
+            }
+        }
+    }
+}

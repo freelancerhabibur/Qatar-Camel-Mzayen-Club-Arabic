@@ -1,0 +1,72 @@
+.sponsors-partners {
+    background-image: url(../images/bg-shape.webp);
+    padding: 50px 0;
+    @include md-devices {
+        padding: 70px 0;
+    }
+    @include lg-devices {
+        padding: 80px 0;
+    }
+    @include xl-devices {
+        padding: 90px 0;
+    }
+    @include xxl-devices {
+        padding: 100px 0;
+    }
+    .nav-tabs {
+        margin-bottom: 20px;
+        @include xl-devices {
+            margin-bottom: 30px;
+        }
+        @include xxl-devices {
+            margin-bottom: 40px;
+        }
+        @include xxxl-devices {
+            margin-bottom: 50px;
+        }
+        .nav-link {
+            font-size: 16px;
+            color: $color__green;
+            font-family: $font-janna-bold;
+            padding: 4px 15px;
+            @include md-devices {
+                font-size: 20px;
+                padding: 4px 20px;
+            }
+            @include xl-devices {
+                font-size: 24px;
+            }
+            @include xxl-devices {
+                font-size: 28px;
+            }
+            @include xxxl-devices {
+                font-size: 32px;
+            }
+
+            &.active, &:hover {
+                color: #cf303f;
+                text-decoration: underline;
+                text-underline-offset: 7px;
+                text-decoration-thickness: 1px;
+            }
+        }
+    }
+    .tab-content {
+        border-top: 2px solid $color__brown;
+        border-bottom: 2px solid $color__brown;
+        padding: 20px 0;
+        @include md-devices {
+            border-top: 5px solid $color__brown;
+            border-bottom: 5px solid $color__brown;
+            padding: 30px 0;
+        }
+        @include xl-devices {
+            padding: 50px 0;
+        }
+        @include xxl-devices {
+            border-top: 10px solid $color__brown;
+            border-bottom: 10px solid $color__brown;
+            padding: 80px 0;
+        }
+    }
+}
